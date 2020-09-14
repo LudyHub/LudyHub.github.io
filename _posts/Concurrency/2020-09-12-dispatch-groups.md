@@ -183,7 +183,7 @@ Si ejecutamos la aplicación podemos ver que la pantalla vuelve azul al momento 
 Si vemos nuestra consola:
 ![image](/assets/dispatchGroups/console.png)
 
-Aquí podemos observar como las descargas comienzan ordenadas pero al momento de finalizar no está garantizado que terminaran en el mismo orden en el que comenzaron.
+Aquí podemos observar cómo las descargas comienzan ordenadas pero al momento de finalizar no está garantizado que terminarán en el mismo orden en el que comenzaron.
 
 Este fue un ejemplo muy sencillo aplicando dispatch groups. Espero que les haya servido.
 
