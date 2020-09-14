@@ -14,9 +14,9 @@ categories: concurrency
 Hola amigos, en este artículo explicaremos un poco qué son los DispatchGroups, para qué funcionan y programaremos una pequeña app de ejemplo.
 
 
-Los DispatchGroups son muy usados en iOS sobretodo en networking cuando queremos hacer múltiples llamadas a algún API. Dentro de un DispatchGroup podemos ejecutar varias tareas sincronas y/o asincronas y saber el momento exacto en el que todas estás tareas han terminado.
+Los DispatchGroups son muy usados en iOS sobretodo en networking cuando queremos hacer múltiples llamadas a algún API. Dentro de un DispatchGroup podemos ejecutar varias tareas síncronas y/o asíncronas y saber el momento exacto en el que todas estas tareas han terminado.
 
-Para que quede más claro, vamos al código, primero emepzaremos creando un proyecto nuevo:
+Para que quede más claro, vamos al código, primero empezaremos creando un proyecto nuevo:
 
 Lo primero que haremos es dentro de nuestro controller definir un arreglo de URLs de los sprites de pokemones del Api de pokemon pokeapi.co
 
@@ -35,7 +35,7 @@ Lo primero que haremos es dentro de nuestro controller definir un arreglo de URL
 }
 {% endhighlight %}
 
-Lo siguiente que haremos sera crear una función que utilizaremos para descargas los sprites de pokemon 
+Lo siguiente que haremos será crear una función que utilizaremos para descargas los sprites de pokemon 
 
 {% highlight swift %}
 func fetchPokemonStarters() {
@@ -190,7 +190,7 @@ Este fue un ejemplo muy sencillo aplicando dispatch groups. Espero que les haya 
 
 ### Notas
 
-* Si ejecutamos de nuevo la aplicación podemos ver que las descargas terminan en órden, esto es porque URLSession tiene un cache por default. Para evitar que se guarde en cache podemos declarar nuestra URLSession así:
+* Si ejecutamos de nuevo la aplicación podemos ver que las descargas terminan en orden, esto es porque URLSession tiene un cache por default. Para evitar que se guarde en cache podemos declarar nuestra URLSession así:
 
 {% highlight swift %}
 let session = URLSession(configuration: .ephemeral)
