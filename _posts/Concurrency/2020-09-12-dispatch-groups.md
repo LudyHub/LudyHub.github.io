@@ -187,6 +187,19 @@ Aquí podemos observar como las descargas comienzan ordenadas pero al momento de
 
 Este fue un ejemplo muy sencillo aplicando dispatch groups. Espero que les haya servido.
 
+
+### Notas
+
+* Si ejecutamos de nuevo la aplicación podemos ver que las descargas terminan en órden, esto es porque URLSession tiene un cache por default. Para evitar que se guarde en cache podemos declarar nuestra URLSession así:
+
+{% highlight swift %}
+let session = URLSession(configuration: .ephemeral)
+{% endhighlight %}
+
+* Si llamamos a leave() antes de enter() nuestra aplicación va a crashear.
+
+* Por cada enter() debe haber un leave() sino nuestro bloque de código dentro de .notify jamás se ejecutará.
+
 Happy coding!
 
 [Link al repositorio](https://github.com/LudyHub/DispatchGroups)
